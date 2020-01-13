@@ -2,10 +2,10 @@
 
 def binary_search(array, element):
     """
-    uses binary search to determine if a given element is in a sorted array
-    :param array: sorted array to search suspected element
-    :param element: element to search
-    :return: Boolean: True if element is in the array else False
+    Uses binary search to determine if a given element is in a sorted array.
+    :param array: list
+    :param element: int element
+    :return: Boolean: Bool True if element is in the array else False
     """
     length = len(array)
     midpoint = length//2

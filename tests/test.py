@@ -17,15 +17,20 @@ class BinarySearchTest(unittest.TestCase):
                 self.assertTrue(binary_search(even_length_array, element))
 
     def test_for_element_not_in_array(self):
-        """elements not in the array should return false"""
+        """elements not in the array should return false."""
         array = list(range(2))
         element_not_in_array = 3
         self.assertFalse(binary_search(array, element_not_in_array))
 
     def test_empty_array(self):
-        """This should not raise an error"""
+        """This should not raise an error."""
         self.assertFalse(binary_search([],0))
 
+    def test_should_not_alter_the_array(self):
+        """It should not have side effects."""
+        array =[1,2]
+        binary_search(array,1)
+        self.assertListEqual(array, [1,2])
 
 if __name__ == "__main__":
     unittest.main()
